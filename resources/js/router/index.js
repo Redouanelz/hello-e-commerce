@@ -7,6 +7,7 @@ import CartShow from '../components/pages/cart/index.vue'
 import Register from '../components/pages/auth/register.vue';
 import Login from '../components/pages/auth/login.vue';
 import Pay from '../components/pages/pay/index.vue';
+import Profile from '../components/pages/auth/profile.vue';
 
 
 const routes = [
@@ -39,7 +40,8 @@ const routes = [
 
     { path: '/pay', component: Pay , name:'pay'},
 
-    
+    { path: '/profile', component: Profile , name:'profile'},
+
 ]
 
 const router = createRouter({ 

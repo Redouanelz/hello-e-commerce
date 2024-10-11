@@ -146,7 +146,7 @@
     getTotalPrice() {
         this.totalPrice = 0,
               this.cartItems.forEach(item => {
-                console.log(item);
+               // console.log(item);
           this.totalPrice += item.product.price * item.quantity; // Calculate total for each item
         });
 
