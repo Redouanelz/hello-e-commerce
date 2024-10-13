@@ -1,6 +1,15 @@
 <template>
     <div>
-      <h4 style="text-align: center">Pay Now</h4><br>
+      <h4 style="text-align: center">Pay Now</h4>
+      <router-link class="nav-link" to="/">Back to Home</router-link>
+      <div class="row">
+        <div class="col-md-6 offset-3">
+          <div class="alert alert-success" role="alert" >
+          <p>You can manage your payments here securely. Choose your preferred payment method and complete your purchase with confidence. Additionally, you can access your payment history to review past transactions.</p>
+        </div>
+        </div>
+       </div>
+      <br>
   
      <div class="row">
         <div class="col-md-4 offset-4" style="text-align:center;">
@@ -24,7 +33,7 @@
         </div>
  
      </div>
-      <h4 style="text-align: center">Orders</h4><br>
+      <h4 style="text-align: center">Payment history</h4><br>
      <table class="table">
       <tr>
         <td><b>Total amount</b></td>

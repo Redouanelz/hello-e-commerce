@@ -6,7 +6,7 @@
             <div class="col-md-3">
                 <img style="margin-left: 50px;" src="/public/logo.webp" width="120px" height="120px" alt="Example Image">
                 <br><b>Doing Things looks good on you.</b>
-                <p>welcome to hello plateform www.hello.com</p>
+                <p>welcome to hello plateform www.hello.xz</p>
             </div>
             <div class="col-md-2">
                 
@@ -91,7 +91,7 @@
         </div>
         <div class="row">
             <div class="col-md-12" style="text-align: center;">
-                ©2024 www.hello.com by Redouane.
+                ©2024 www.hello.xz by Redouane.
             </div>
         </div>
     </div>

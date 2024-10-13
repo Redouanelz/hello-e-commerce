@@ -31,7 +31,7 @@
     </head>
     <body>
         <div class="top-header">
-            Welcome to www.hello.com E-Commerce Project. - 50% discount
+            Welcome to hello E-Commerce Project. - 50% discount
         </div>
         <div id=app>
             

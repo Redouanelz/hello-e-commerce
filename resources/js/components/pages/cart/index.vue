@@ -2,6 +2,13 @@
     <div>
         <h4 style="text-align: center">Your Cart</h4><br>
         <router-link class="nav-link" to="/">Back to Home</router-link>
+       <div class="row">
+        <div class="col-md-6 offset-3">
+          <div class="alert alert-success" role="alert" >
+          <p>You can manage your cart here with ease. Add or remove items, adjust quantities, and review your selections before proceeding to checkout. Your cart is always accessible, allowing you to modify it at any time as you shop.</p>
+        </div>
+        </div>
+       </div>
         <div  style="text-align:center"> {{ cartItems.length }} product(s)</div>
         <br>
       <div v-if="cartItems.length > 0" class="row">

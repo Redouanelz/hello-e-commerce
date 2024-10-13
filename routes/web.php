@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,8 +11,12 @@ Route::get('/{pathMatch}',function() {
     return view('welcome');
 });
 
+use App\Http\Controllers\ProductController;
+
 Route::get('/api/products', [ProductController::class, 'index']);
 Route::get('/api/product/{id}', [ProductController::class, 'show']);
+
+use App\Http\Controllers\CartController;
 
 Route::get('/api/cart', [CartController::class, 'index']);
 Route::get('/api/cart/{id}', [CartController::class, 'show']);
@@ -31,6 +33,9 @@ Route::post('/api/cart/removequantity', [CartController::class, 'decreaseQuantit
 use App\Http\Controllers\AuthController;
 Route::post('/api/register', [AuthController::class, 'register']);
 Route::post('/api/login', [AuthController::class, 'login']);
+Route::get('/api/profile/{id}', [AuthController::class, 'show']);
+Route::put('/api/profile/{id}', [AuthController::class, 'update']);
+
 
 use App\Http\Controllers\PayController;
 Route::get('/api/pay/{id}', [PayController::class, 'show']);
@@ -40,6 +45,9 @@ Route::post('/api/pay/add', [PayController::class, 'add']);
 use App\Http\Controllers\AvisController;
 Route::get('/api/avis/{id}', [AvisController::class, 'show']);
 Route::post('/api/avis/add', [AvisController::class, 'add']);
+
+use App\Http\Controllers\CategoriesController;
+Route::get('/api/categories', [CategoriesController::class, 'index']);
 
 
 

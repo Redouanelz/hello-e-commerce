@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -59,5 +60,51 @@ class AuthController extends Controller
         return response()->json(['message' => 'Logged out successfully.'], 200);
     }
     
+
+    public function show($user_id){
+        $user = User::find($user_id);
+        if (!$user) {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+        return response()->json($user);
+    }
+
+
+    public function update(Request $request, $id)
+    {
+        // Validate the incoming request
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
+            'address' => 'nullable|string|max:255',
+            'phone' => 'nullable|string|max:15',
+            'date_naissance' => 'nullable|date',
+        ]);
+
+        // Check if validation fails
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Validation error',
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        // Find the user by ID
+        $user = User::findOrFail($id);
+
+        // Update the user's profile with the request data
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->address = $request->input('address');
+        $user->phone = $request->input('phone');
+        $user->date_naissance = $request->input('date_naissance');
+        $user->save();
+
+        // Return a success response
+        return response()->json([
+            'message' => 'Profile updated successfully',
+            'user' => $user,
+        ], 200);
+    }
 
 }
