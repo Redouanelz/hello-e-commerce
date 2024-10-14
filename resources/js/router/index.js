@@ -8,6 +8,8 @@ import Register from '../components/pages/auth/register.vue';
 import Login from '../components/pages/auth/login.vue';
 import Pay from '../components/pages/pay/index.vue';
 import Profile from '../components/pages/auth/profile.vue';
+import Categories from '../components/pages/categories/index.vue';
+import CategoriesShow from '../components/pages/categories/show.vue';
 
 
 const routes = [
@@ -42,6 +44,13 @@ const routes = [
 
     { path: '/profile', component: Profile , name:'profile'},
 
+    { path: '/categories', component: Categories , name:'categories'},
+    {
+        path: '/categories/:id',
+        name: 'categories.show',
+        component: CategoriesShow,
+        props: true // Pass the id as a prop to the component
+    }
 ]
 
 const router = createRouter({ 

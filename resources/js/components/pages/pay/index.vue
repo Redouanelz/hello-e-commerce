@@ -123,6 +123,7 @@
           .then(response => {
              alert("Order done successfully.")
              this.$router.push({ name: 'home' });
+
                 axios.post('/api/cart/clear', {
                   user_id: this.user.id,
               })

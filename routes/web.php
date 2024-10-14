@@ -48,6 +48,7 @@ Route::post('/api/avis/add', [AvisController::class, 'add']);
 
 use App\Http\Controllers\CategoriesController;
 Route::get('/api/categories', [CategoriesController::class, 'index']);
+Route::get('/api/categories/{id}', [CategoriesController::class, 'show']);
 
 
 

@@ -62,6 +62,53 @@
 
         </div>
       </div>
+      <div style="margin-top: 150px;"></div>
+
+      <div class="col-md-6">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/public/pexels_a.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/public/pexels_b.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/public/pexels_c.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+      <div class="col-md-5 offset-1 "  style="text-align: center">
+        <h4>About Us</h4>
+        <h6>Welcome to Our E-Commerce Platform!</h6>
+        <p>We are an online marketplace dedicated to providing you with a wide variety of products across different categories. From electronics to fashion, home essentials, beauty products, and more, we strive to offer quality products at competitive prices. Our platform is designed with your convenience in mind, allowing you to browse, search, and shop for the items you need in a user-friendly, secure environment. Whether you're looking for the latest trends or daily necessities, we are here to meet your shopping needs with just a few clicks. Explore our diverse range of products and enjoy a seamless shopping experience!</p>
+      </div>  
     </div>
 
     <div style="margin-top: 150px;"></div>
