@@ -12,21 +12,18 @@ Route::get('/{pathMatch}',function() {
 });
 
 use App\Http\Controllers\ProductController;
-
 Route::get('/api/products', [ProductController::class, 'index']);
 Route::get('/api/product/{id}', [ProductController::class, 'show']);
 
-use App\Http\Controllers\CartController;
 
+use App\Http\Controllers\CartController;
 Route::get('/api/cart', [CartController::class, 'index']);
 Route::get('/api/cart/{id}', [CartController::class, 'show']);
 Route::post('/api/cart/add', [CartController::class, 'add']);
 Route::post('/api/cart/remove', [CartController::class, 'remove']);
 Route::post('/api/cart/clear', [CartController::class, 'clear']);
-
 // Increase the quantity of the cart item
 Route::post('/api/cart/addquantity', [CartController::class, 'increaseQuantity']);
-
 // Decrease the quantity of the cart item
 Route::post('/api/cart/removequantity', [CartController::class, 'decreaseQuantity']);
 
